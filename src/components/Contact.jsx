@@ -15,7 +15,10 @@ const Contact = () => {
     setLoading(true);
     setFeedback("");
     try {
-      const res = await axios.post("/api/messages", formData); // ⬅️ Using Vite proxy
+      const res = await axios.post(
+        "https://mern-backend-ofcu.onrender.com/api/messages",
+        formData
+      );
       if (res.data.success) {
         setFeedback("✅ Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
@@ -65,7 +68,15 @@ const Contact = () => {
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
-        {feedback && <p className="text-sm text-center">{feedback}</p>}
+        {feedback && (
+          <p
+            className={`text-sm text-center ${
+              feedback.includes("✅") ? "text-green-600" : "text-red-600"
+            }`}
+          >
+            {feedback}
+          </p>
+        )}
       </form>
     </section>
   );

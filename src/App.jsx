@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div id="home" className="pt-20"><Home /></div>
+      <div id="home" className="pt-16"><Home /></div>
       <div id="work"><Work /></div>
       <div id="certifications"><Certifications /></div>
       <div id="contact"><Contact /></div>

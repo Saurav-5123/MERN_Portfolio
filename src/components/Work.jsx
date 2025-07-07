@@ -1,17 +1,34 @@
-const Work = () => (
-  <section id="work" className="py-12 px-6 bg-gray-800 text-gray-100">
-    <h2 data-aos="fade-up" className="text-3xl font-bold text-center mb-8">Work Experience & Volunteering</h2>
-    <div className="space-y-8 max-w-4xl mx-auto">
-      <div data-aos="fade-up" className="border-l-4 border-blue-600 pl-4">
-        <h3 className="text-xl font-semibold">NSE Education Internship</h3>
-        <p>Built quiz apps for Classes 6–8 using React and MongoDB.</p>
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200" className="border-l-4 border-emerald-600 pl-4">
-        <h3 className="text-xl font-semibold">HelpAge NGO Volunteer</h3>
-        <p>Taught digital literacy to elders and optimized app pagination.</p>
-      </div>
-    </div>
-  </section>
-);
+import React from 'react'
 
-export default Work;
+const Work = () => {
+  return (
+    <section id="work" className="py-16 px-6 bg-primary text-white">
+      <div className="max-w-4xl mx-auto space-y-6" data-aos="fade-up">
+        <h2 className="text-3xl font-bold mb-4">Work & Projects</h2>
+
+        <div>
+          <h3 className="text-xl font-semibold">NSE Education – Quiz App</h3>
+          <p>React.js, MongoDB | Feb 2024 – April 2025</p>
+          <p>Implemented quizzes for classes 6–8 integrated into website seamlessly.</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold">My Rights</h3>
+          <p>React, MongoDB | Dec 2024</p>
+          <p>
+            Legal consulting platform with dynamic data, REST APIs and responsive design.
+            <a href="https://myrights.netlify.app" className="text-accent"> Visit site</a>
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold">Notes App</h3>
+          <p>Swift | April 2025</p>
+          <p>iOS App to manage notes and reminders using Core Data and push notifications.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Work

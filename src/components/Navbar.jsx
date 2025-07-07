@@ -1,20 +1,38 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrolled(window.scrollY > 50)
+    })
+  }, [])
+
+  const links = [
+    { to: '#home', label: 'Home' },
+    { to: '#about', label: 'About' },
+    { to: '#work', label: 'Work' },
+    { to: '#certifications', label: 'Certifications' },
+    { to: '#contact', label: 'Contact' },
+  ]
+
   return (
-    <nav className="fixed w-full z-50 bg-primary bg-opacity-90 p-4 shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center text-white">
-        <h1 className="text-xl font-bold">Saurav</h1>
-        <div className="space-x-4">
-          <a href="#home" className="hover:text-accent">Home</a>
-          <a href="#about" className="hover:text-accent">About</a>
-          <a href="#work" className="hover:text-accent">Work</a>
-          <a href="#certifications" className="hover:text-accent">Certifications</a>
-          <a href="#contact" className="hover:text-accent">Contact</a>
+    <nav className={`fixed w-full z-30 transition-colors ${scrolled ? 'bg-sectionDark' : 'bg-transparent'}`}>
+      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+        <div className="text-2xl font-bold text-white">Saurav</div>
+        <div className="space-x-8">
+          {links.map(l => (
+            <a
+              key={l.to}
+              href={l.to}
+              className="text-white hover:text-accent transition"
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
   )
 }
-
 export default Navbar

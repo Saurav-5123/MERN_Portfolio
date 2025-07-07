@@ -1,20 +1,19 @@
-const certs = [
-  "MERN Stack Internship - Cipher School (July 2024)",
-  "Software Testing (SWAYAM)",
-  "PHP Web Apps (U of Michigan)",
-  "Data Structures in C++ (Udemy)",
-  "Intermediate SQL (HackerRank)",
-  "Python Certificate (HackerRank)",
-  "Bytebash Hackathon Finalist"
-];
+import React from 'react'
 
-const Certifications = () => (
-  <section id="certifications" className="py-12 px-6 bg-gray-800 text-gray-100">
-    <h2 data-aos="fade-up" className="text-3xl font-bold text-center mb-8">Certifications & Achievements</h2>
-    <ul className="space-y-2 max-w-3xl mx-auto list-disc pl-6 text-gray-400">
-      {certs.map((c, i) => <li data-aos="fade-up" data-aos-delay={i*100} key={i}>{c}</li>)}
-    </ul>
-  </section>
-);
+const Certifications = () => {
+  return (
+    <section id="certifications" className="py-16 px-6 bg-secondary text-white">
+      <div className="max-w-4xl mx-auto space-y-4" data-aos="fade-up">
+        <h2 className="text-3xl font-bold mb-4">Certifications</h2>
+        <ul className="list-disc pl-5">
+          <li>Software Testing (SWAYAM)</li>
+          <li>MERN Stack Internship (Cipher School)</li>
+          <li>Building Web Applications in PHP (University of Michigan)</li>
+          <li>SQL & Python Certifications (HackerRank)</li>
+        </ul>
+      </div>
+    </section>
+  )
+}
 
-export default Certifications;
+export default Certifications

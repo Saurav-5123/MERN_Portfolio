@@ -1,11 +1,10 @@
-import React from 'react'
-import bg from '../image.png'
+import React from 'react';
 
 const Hero = () => (
   <section
     id="home"
     className="h-screen bg-cover bg-center flex items-center justify-center"
-    style={{ backgroundImage: `url(${bg})` }}
+    style={{ backgroundImage: `url('/image.png')` }} // ✅ Corrected path
   >
     <div
       className="bg-black bg-opacity-50 p-6 rounded-md text-center"
@@ -19,5 +18,6 @@ const Hero = () => (
       </p>
     </div>
   </section>
-)
-export default Hero
+);
+
+export default Hero;

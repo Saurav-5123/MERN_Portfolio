@@ -1,12 +1,11 @@
-const Footer = () => (
-  <footer className="bg-gray-950 text-gray-500 text-center py-6">
-    <p>Connect with me:</p>
-    <div className="flex justify-center gap-6 mt-2">
-      <a href="https://www.linkedin.com/in/saurav5123/" target="_blank" className="hover:text-blue-400">LinkedIn</a>
-      <a href="https://github.com/Saurav-5123" target="_blank" className="hover:text-white">GitHub</a>
-    </div>
-    <p className="mt-4 text-sm">© {new Date().getFullYear()} Saurav. All rights reserved.</p>
-  </footer>
-);
+import React from 'react'
 
-export default Footer;
+const Footer = () => {
+  return (
+    <footer className="bg-black py-4 text-center text-sm text-white">
+      © 2025 Saurav — All Rights Reserved
+    </footer>
+  )
+}
+
+export default Footer

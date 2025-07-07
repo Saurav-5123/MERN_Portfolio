@@ -6,6 +6,7 @@ import Work from './components/Work'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import './assets/main.css';
 
 const App = () => {
   return (
